@@ -9,7 +9,6 @@ namespace Khepin\Medusa\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Process\Process;
 
@@ -33,8 +32,10 @@ EOT
     }
 
     /**
-     * @param InputInterface  $input  The input instance
+     * @param InputInterface $input The input instance
      * @param OutputInterface $output The output instance
+     * @return int
+     * @throws \Exception
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
@@ -42,13 +43,14 @@ EOT
         $dir = $config->repodir;
         $repos = glob($dir.'/*/*.git');
 
-        $fetchCmd = 'cd %s && git fetch --prune';
-        $updateCmd = 'cd %s && git update-server-info -f';
-
         foreach ($repos as $repo) {
+            $fetchCmd = ['git', 'fetch', '--prune'];
+            $updateCmd = ['git', 'update-server-info', '-f'];
+
             $output->writeln(' - Fetching latest changes in <info>'.$repo.'</info>');
-            $process = new Process(sprintf($fetchCmd, $repo));
-            $process->setTimeout(300)
+            $process = new Process($fetchCmd);
+            $process->setWorkingDirectory($repo)
+                    ->setTimeout(300)
                     ->run();
 
             if (!$process->isSuccessful()) {
@@ -57,8 +59,9 @@ EOT
 
             $output->writeln($process->getOutput());
 
-            $process = new Process(sprintf($updateCmd, $repo));
-            $process->setTimeout(600)
+            $process = new Process($updateCmd);
+            $process->setWorkingDirectory($repo)
+                    ->setTimeout(600)
                     ->run();
 
             if (!$process->isSuccessful()) {
@@ -67,5 +70,6 @@ EOT
 
             $output->writeln($process->getOutput());
         }
+        return 0;
     }
 }

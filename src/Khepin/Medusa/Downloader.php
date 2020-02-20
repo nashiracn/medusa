@@ -20,17 +20,22 @@ class Downloader
         $this->url = preg_replace('~^git@github.com:~', 'git://github.com/', $url);
     }
 
+    /**
+     * @param $in_dir
+     * @return bool
+     * @throws \Exception
+     */
     public function download($in_dir)
     {
         $repo = $in_dir . '/' . $this->package . ".git";
 
         if (is_dir($repo)) {
-            return;
+            return false;
         }
 
-        $cmd = 'git clone --mirror %s %s';
+        $cmd = ['git', 'clone', '--mirror', $this->url, $repo];
 
-        $process = new Process(sprintf($cmd, $this->url, $repo));
+        $process = new Process($cmd);
         $process->setTimeout(3600);
         $process->run();
 
@@ -38,23 +43,26 @@ class Downloader
             throw new \Exception($process->getErrorOutput());
         }
 
-        $cmd = 'cd %s && git update-server-info -f';
+        $cmd = ['git', 'update-server-info', '-f'];
 
-        $process = new Process(sprintf($cmd, $repo));
-        $process->setTimeout(3600);
-        $process->run();
-
-        if (!$process->isSuccessful()) {
-            throw new \Exception($process->getErrorOutput());
-        }
-
-        $cmd = 'cd %s && git fsck';
-        $process = new Process(sprintf($cmd, $repo));
-        $process->setTimeout(3600);
-        $process->run();
+        $process = new Process($cmd);
+        $process->setWorkingDirectory($repo)
+                ->setTimeout(3600)
+                ->run();
 
         if (!$process->isSuccessful()) {
             throw new \Exception($process->getErrorOutput());
         }
+
+        $cmd = ['git', 'fsck'];
+        $process = new Process($cmd);
+        $process->setWorkingDirectory($repo)
+                ->setTimeout(3600)
+                ->run();
+
+        if (!$process->isSuccessful()) {
+            throw new \Exception($process->getErrorOutput());
+        }
+        return true;
     }
 }

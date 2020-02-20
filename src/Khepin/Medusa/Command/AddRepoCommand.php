@@ -11,8 +11,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Process\Process;
-use Guzzle\Service\Client;
+use GuzzleHttp\Client;
 use Composer\Json\JsonFile;
 use Khepin\Medusa\DependencyResolver;
 use Khepin\Medusa\Downloader;
@@ -21,11 +20,12 @@ class AddRepoCommand extends Command
 {
     protected $guzzle;
     protected $config;
+    protected $output;
 
     public function __construct()
     {
         parent::__construct();
-        $this->guzzle = new Client('https://packagist.org');
+        $this->guzzle = new Client(['base_uri'=>'https://packagist.org']);
     }
 
     protected function configure()
@@ -42,8 +42,10 @@ class AddRepoCommand extends Command
     }
 
     /**
-     * @param InputInterface  $input  The input instance
+     * @param InputInterface $input The input instance
      * @param OutputInterface $output The output instance
+     * @return int
+     * @throws \Exception
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
@@ -54,21 +56,39 @@ class AddRepoCommand extends Command
         $url = $this->getRepositoryUrl($package);
 
         if (!$url) {
-            $this->mirrorPackagistAndRepositories($input->getOption('with-deps'),  $package);
+            $retval = $this->mirrorPackagistAndRepositories($input->getOption('with-deps'),  $package);
         } else {
-            $this->mirrorRepositoryOnly($package, $url);
+            $retval = $this->mirrorRepositoryOnly($package, $url);
         }
+        return $retval ? 0 : -1;
     }
 
+    /**
+     * @param $package
+     * @param $url
+     * @return bool
+     * @throws \Exception
+     */
     protected function mirrorRepositoryOnly($package, $url)
     {
         $this->output->writeln(' - Mirroring <info>'.$package.'</info>');
-        $this->getGitRepo($package, $url);
+        if (!$this->getGitRepo($package, $url)) {
+            throw new \Exception("getGitRepo(): Failed");
+        }
         $this->output->writeln('');
 
-        $this->updateSatisConfig($package);
+        if (!$this->updateSatisConfig($package)) {
+            throw new \Exception("updateSatisConfig(): Failed");
+        }
+        return true;
     }
 
+    /**
+     * @param $withDependencies
+     * @param $package
+     * @return bool
+     * @throws \Exception
+     */
     protected function mirrorPackagistAndRepositories($withDependencies, $package)
     {
         $deps = array($package);
@@ -80,11 +100,16 @@ class AddRepoCommand extends Command
 
         foreach ($deps as $package) {
             $this->output->writeln(' - Mirroring <info>'.$package.'</info>');
-            $this->getGitRepo($package);
+            if (!$this->getGitRepo($package)) {
+                throw new \Exception("getGitRepo(): Failed");
+            }
             $this->output->writeln('');
 
-            $this->updateSatisConfig($package);
+            if (!$this->updateSatisConfig($package)) {
+                throw new \Exception("updateSatisConfig(): Failed");
+            }
         }
+        return true;
     }
 
     protected function updateSatisConfig($package)
@@ -114,6 +139,7 @@ class AddRepoCommand extends Command
             $config['repositories'] = $this->deduplicate($config['repositories']);
             $file->write($config);
         }
+        return true;
     }
 
     private function deduplicate($repositories)
@@ -127,6 +153,12 @@ class AddRepoCommand extends Command
         return array_values($newRepositories);
     }
 
+    /**
+     * @param $package
+     * @param null $url
+     * @return bool
+     * @throws \Exception
+     */
     protected function getGitRepo($package, $url = null)
     {
         $outputDir = $this->config->repodir;
@@ -135,13 +167,11 @@ class AddRepoCommand extends Command
         if (is_dir($dir)) {
             $this->output->writeln('  <comment>The repo already exists. Try updating it instead.</comment>');
 
-            return;
+            return true;
         }
 
         if (!$url) {
-            $response = $this->guzzle->get('/packages/'.$package.'.json')->send();
-            $response = $response->getBody(true);
-
+            $response = $this->guzzle->get('/packages/'.$package.'.json')->getBody();
             $packageInfo = json_decode($response);
 
             $package = $packageInfo->package->name;
@@ -149,7 +179,7 @@ class AddRepoCommand extends Command
         }
 
         $downloader = new Downloader($package, $url);
-        $downloader->download($outputDir);
+        return $downloader->download($outputDir);
     }
 
     /**

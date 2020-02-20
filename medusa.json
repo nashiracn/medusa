@@ -1,10 +1,17 @@
 {
-    "repositories": [
-    ],
+    "repodir": "git",
+    "satisconfig": "satis.json",
+    "satisurl": "https://composer.zhixue-edu.com:60443/git",
     "require": [
-        "guzzle/guzzle"
-    ],
-    "repodir": "web/repositories",
-    "satisurl": "http://user:password@satis.host:port/repositories",
-    "satisconfig": "satis.json"
+        "deployer/deployer",
+        "overtrue/phplint",
+        "psr/log",
+        "php-amqplib/php-amqplib",
+        "phpoffice/phpspreadsheet",
+        "stomp-php/stomp-php",
+        "guzzlehttp/guzzle",
+        "endroid/qr-code",
+        "alibabacloud/sdk",
+        "phpunit/phpunit"
+    ]
 }

@@ -92,6 +92,10 @@ To update all repos and rebuild the satis config.
 * `package` is the package name you want to mirror (eg: symfony/symfony)
 * `config-file` is the medusa.json config file; the specified satis.json config file will be updated
 
+# Use a Socks5 Proxy:
+
+`ALL_PROXY=socks5h://127.0.0.1:1987 ./bin/medusa mirror medusa.json`
+
 # Make composer use it
 
 Point a webserver to the `web/` directory.

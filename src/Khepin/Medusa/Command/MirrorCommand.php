@@ -9,10 +9,8 @@ namespace Khepin\Medusa\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Command\Command;
 use Khepin\Medusa\DependencyResolver;
-use Guzzle\Service\Client;
 use Symfony\Component\Console\Input\ArrayInput;
 
 class MirrorCommand extends Command
@@ -37,13 +35,14 @@ EOT
     }
 
     /**
-     * @param InputInterface  $input  The input instance
+     * @param InputInterface $input The input instance
      * @param OutputInterface $output The output instance
+     * @return int
+     * @throws \Exception
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln('<info>First getting all dependencies</info>');
-        $this->guzzle = new Client('https://packagist.org');
         $medusaConfig = $input->getArgument('config');
         $config = json_decode(file_get_contents($medusaConfig));
         $repos = array();
@@ -85,5 +84,6 @@ EOT
             $input = new ArrayInput($arguments);
             $returnCode = $command->run($input, $output);
         }
+        return 0;
     }
 }

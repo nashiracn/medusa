@@ -3,3 +3,8 @@ medusa.phar
 /repos/
 /vendor/
 /web/
+.DS_Store
+.idea/
+web/
+git/
+deps.json
