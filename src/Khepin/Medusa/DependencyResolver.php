@@ -19,7 +19,7 @@ class DependencyResolver
     {
         $this->package = $package;
         if (is_null(self::$dependency_resolver)) {
-            self::$dependency_resolver = new NewDependencyResolver();
+            self::$dependency_resolver = NewDependencyResolver::instance();
         }
     }
 

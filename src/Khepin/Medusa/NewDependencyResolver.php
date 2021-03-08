@@ -32,7 +32,7 @@ class NewDependencyResolver
                 $this->packages[$package] = $hash['sha256'];
             }
         }
-//        file_put_contents('cache.json', json_encode($this->packages, JSON_UNESCAPED_UNICODE));
+        //file_put_contents('cache.json', json_encode($this->packages, JSON_UNESCAPED_UNICODE));
     }
 
     public function package(string $package): ?array {
@@ -55,7 +55,11 @@ class NewDependencyResolver
             $url = sprintf('%s%s', $this->base_url, $file);
         }
         curl_setopt($ch, CURLOPT_URL, $url);
+        //$start = gettimeofday(true);
+        //printf(">>> %15.3f url=%s\n", $start, $url);
         $r = curl_exec($ch);
+        //$stop = gettimeofday(true);
+        //printf("time: %6.3f\n", ($stop - $start));
 
 
         if (!$r || curl_getinfo($ch, CURLINFO_HTTP_CODE) !== 200) {
@@ -68,6 +72,13 @@ class NewDependencyResolver
         return $data;
     }
 
+    static public function instance(): self {
+        static $_ = null;
+        if (is_null($_)) {
+            $_ = new Static();
+        }
+        return $_;
+    }
 }
 
 //$d = new NewDependencyResolver();

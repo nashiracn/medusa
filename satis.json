@@ -1,8 +1,8 @@
 {
-    "homepage": "http://composer.zhixue-edu.com:60443/",
+    "homepage": "http://composer.zhixue-edu.com:60443",
     "minimum-stability": "stable",
     "name": "zxedu/composer-repository",
-    "output-dir": "web",
+    "output-dir": "/mnt/nvme0n1/ci/web",
     "output-html": true,
     "providers": true,
     "repositories": [
@@ -17,6 +17,938 @@
         {
             "type": "git",
             "url": "https://composer.zhixue-edu.com:60443/git/kherge/amend.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-php80.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/marcj/topsort.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/react/http.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/guzzlehttp/psr7.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/psr/http-factory.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/ralouphie/getallheaders.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/guzzle/http.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/event-dispatcher.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/deprecation-contracts.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/event-dispatcher-contracts.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/psr/event-dispatcher.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/contracts.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/psr/container.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/psr/cache.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/guzzle/stream.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/guzzle/common.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/guzzle/guzzle.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/validator.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-php73.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/translation-contracts.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-mbstring.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-ctype.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/property-access.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/property-info.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/string.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-intl-normalizer.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-intl-grapheme.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/inflector.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-php70.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/paragonie/random_compat.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/translation.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/doctrine/common.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/doctrine/persistence.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/cache.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/service-contracts.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/cache-contracts.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/var-exporter.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-apcu.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/psr/simple-cache.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/psr/log.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/doctrine/reflection.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/doctrine/event-manager.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/doctrine/annotations.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/doctrine/lexer.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/doctrine/collections.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/doctrine/cache.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/doctrine/inflector.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/react/event-loop.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/react/promise-stream.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/react/promise.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/evenement/evenement.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/react/stream.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/ringcentral/psr7.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/guzzle/parser.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/react/socket.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/react/promise-timer.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/react/dns.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/react/cache.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/psr/http-message.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/pimple/pimple.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/monolog/monolog.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/deployer/phar-update.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/herrera-io/phar-update.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/herrera-io/version.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/kherge/version.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/herrera-io/json.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/kherge/file-manager.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/seld/jsonlint.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/justinrainbow/json-schema.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/zendframework/zend-uri.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/zendframework/zend-validator.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/container-interop/container-interop.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/zendframework/zend-stdlib.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/zendframework/zend-hydrator.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/zendframework/zend-servicemanager.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/zendframework/zend-i18n.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/zendframework/zend-filter.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/zendframework/zend-escaper.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/icecave/parity.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/icecave/repr.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/marc-mabe/php-enum.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/process.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/yaml.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/elfet/pure.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/debug.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/expression-language.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/react/react.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/react/socket-client.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/react/http-client.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/react/child-process.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/silex/silex.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/routing.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/http-kernel.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/http-client-contracts.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/error-handler.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/var-dumper.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-php72.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-php56.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-util.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/http-foundation.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/mime.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/serializer.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpdocumentor/reflection-docblock.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/webmozart/assert.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpdocumentor/type-resolver.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpdocumentor/reflection-common.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/dflydev/markdown.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-intl-idn.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-php55.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/ircmaxell/password-compat.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-php54.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/console.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/finder.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/overtrue/phplint.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/n98/junit-xml.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/php-amqplib/php-amqplib.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpoffice/phpspreadsheet.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/ezyang/htmlpurifier.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/psr/http-client.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/guzzlehttp/guzzle.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/guzzlehttp/promises.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/guzzlehttp/ringphp.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/guzzlehttp/streams.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/maennchen/zipstream-php.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/myclabs/php-enum.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/vimeo/psalm.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/dnoegel/php-xdg-base-dir.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/composer/package-versions-deprecated.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/diff.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/ocramius/package-versions.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/composer/semver.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpmyadmin/sql-parser.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpmyadmin/motranslator.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/amphp/byte-stream.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/amphp/amp.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/webmozart/path-util.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/webmozart/glob.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sabre/uri.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sabre/event.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/netresearch/jsonmapper.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/felixfbecker/advanced-json-rpc.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/felixfbecker/language-server-protocol.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/composer/xdebug-handler.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/php-cs-fixer/diff.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/muglug/package-versions-56.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/muglug/package-versions.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/openlss/lib-array2xml.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/squizlabs/php_codesniffer.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/friendsofphp/php-cs-fixer.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/gecko-packages/gecko-php-unit.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/polyfill-xml.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/stopwatch.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/options-resolver.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/symfony/filesystem.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/composer/composer.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/composer/ca-bundle.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/seld/cli-prompt.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/seld/phar-utils.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/composer/spdx-licenses.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/nikic/php-parser.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/markbaker/matrix.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/markbaker/complex.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/stomp-php/stomp-php.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/endroid/qr-code.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/endroid/installer.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/roave/security-advisories.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/khanamiryan/qrcode-detector-decoder.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/bacon/bacon-qr-code.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/dasprid/enum.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/alibabacloud/sdk.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/alibabacloud/client.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/nette/utils.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/moontoast/math.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpseclib/bcmath_compat.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/ramsey/uuid.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/ramsey/collection.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/brick/math.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/mtdowling/jmespath.php.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/league/climate.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/illuminate/support.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/illuminate/macroable.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/illuminate/collections.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/voku/portable-ascii.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/nesbot/carbon.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/kylekatarnls/update-helper.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/illuminate/contracts.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/danielstjules/stringy.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/clagiordano/weblibs-configmanager.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/adbario/php-dot-notation.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/bshaffer/oauth2-server-php.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/zendframework/zend-diactoros.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/influxdb/influxdb-php.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/league/oauth2-server.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/league/openid-connect-claims.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/defuse/php-encryption.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/lcobucci/jwt.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/lcobucci/jose-parsing.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/lcobucci/clock.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/league/event.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/zetacomponents/database.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/zetacomponents/base.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpunit/phpunit.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/cli-parser.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/code-unit.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpunit/php-invoker.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/type.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/doctrine/instantiator.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phar-io/version.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phar-io/manifest.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/object-enumerator.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/object-reflector.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/myclabs/deep-copy.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/resource-operations.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpspec/prophecy.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/recursion-context.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/global-state.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/comparator.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpunit/dbunit.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/version.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/exporter.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/environment.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpunit/phpunit-mock-objects.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/ocramius/instantiator.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/ocramius/lazy-map.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpunit/php-timer.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpunit/php-code-coverage.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/lines-of-code.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/complexity.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/theseer/tokenizer.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/sebastian/code-unit-reverse-lookup.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpunit/php-token-stream.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpunit/php-text-template.git"
+        },
+        {
+            "type": "git",
+            "url": "https://composer.zhixue-edu.com:60443/git/phpunit/php-file-iterator.git"
         }
     ],
     "require-all": false,

@@ -11,21 +11,19 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Command\Command;
-use GuzzleHttp\Client;
 use Composer\Json\JsonFile;
 use Khepin\Medusa\DependencyResolver;
+use Khepin\Medusa\NewDependencyResolver;
 use Khepin\Medusa\Downloader;
 
 class AddRepoCommand extends Command
 {
-    protected $guzzle;
     protected $config;
     protected $output;
 
     public function __construct()
     {
         parent::__construct();
-        $this->guzzle = new Client(['base_uri'=>'https://packagist.org']);
     }
 
     protected function configure()
@@ -171,11 +169,15 @@ class AddRepoCommand extends Command
         }
 
         if (!$url) {
-            $response = $this->guzzle->get('/packages/'.$package.'.json')->getBody();
-            $packageInfo = json_decode($response);
-
-            $package = $packageInfo->package->name;
-            $url = $packageInfo->package->repository;
+            $response = NewDependencyResolver::instance()->package($package);
+            foreach($response as $version) {
+                if (isset($version['source']) && $version['source']['type'] == 'git') {
+                    $url = $version['source']['url'];
+                }
+            }
+        }
+        if (!$url) {
+            return false;
         }
 
         $downloader = new Downloader($package, $url);

@@ -1,5 +1,7 @@
 composer.phar
 medusa.phar
+*.json.backup
+cache.json
 /repos/
 /vendor/
 /web/

@@ -1,6 +1,6 @@
 {
-    "repodir": "git",
-    "satisconfig": "satis.json",
+    "repodir": "/mnt/nvme0n1/ci/git",
+    "satisconfig": "/mnt/nvme0n1/ci/medusa/satis.json",
     "satisurl": "https://composer.zhixue-edu.com:60443/git",
     "require": [
         "deployer/deployer",
