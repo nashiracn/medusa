@@ -6,7 +6,6 @@
 
 namespace Khepin\Medusa;
 
-use GuzzleHttp\Client;
 
 /**
  * Finds all the dependencies on which a given package relies
@@ -14,18 +13,20 @@ use GuzzleHttp\Client;
 class DependencyResolver
 {
     protected $package;
+    static ?NewDependencyResolver $dependency_resolver = null;
 
     public function __construct($package)
     {
         $this->package = $package;
+        if (is_null(self::$dependency_resolver)) {
+            self::$dependency_resolver = new NewDependencyResolver();
+        }
     }
 
     public function resolve()
     {
         $deps = array($this->package);
         $resolved = array();
-
-        $guzzle = new Client(['base_uri'=>'https://packagist.org']);
 
         while (count($deps) > 0) {
             $package = array_pop($deps);
@@ -35,20 +36,19 @@ class DependencyResolver
                 continue;
             }
 
-            try {
-                $response = $guzzle->get('/packages/'.$package.'.json')->getBody();
-            } catch (\Exception $e) {
-                continue;
-            }
-            $package = json_decode($response);
+            $package_name = $package;
+            $package = self::$dependency_resolver->package($package_name);
 
             if (!is_null($package)) {
-                foreach ($package->package->versions as $version) {
-                    if (!isset($version->require)) {
+                foreach ($package as $version) {
+                    if (!isset($version['require'])) {
                         continue;
                     }
 
-                    foreach ($version->require as $dependency => $version) {
+                    foreach ($version['require'] as $dependency => $version) {
+                        if ($this->skipped($dependency)) {
+                            continue;
+                        }
                         if (!in_array($dependency, $resolved) && !in_array($dependency, $deps)) {
                             $deps[] = $dependency;
                             $deps = array_unique($deps);
@@ -56,7 +56,7 @@ class DependencyResolver
                     }
                 }
 
-                $resolved[] = $package->package->name;
+                $resolved[] = $package_name;
             }
         }
 
@@ -81,6 +81,14 @@ class DependencyResolver
         // 	Often these will be identical - the vendor name just exists to prevent naming clashes.
         //	Source: https://getcomposer.org/doc/01-basic-usage.md
         return (strstr($package, '/')) ? false: true;
+    }
+
+    private function skipped($package): bool {
+        return in_array($package, [
+            'deployer/phpseclib',
+            'phpseclib/phpseclib',
+            'elfet/php-ssh',
+        ]);
     }
 
     private function rename($package)

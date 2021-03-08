@@ -12,6 +12,9 @@
         "guzzlehttp/guzzle",
         "endroid/qr-code",
         "alibabacloud/sdk",
+        "bshaffer/oauth2-server-php",
+        "influxdb/influxdb-php",
+        "league/oauth2-server",
         "phpunit/phpunit"
     ]
 }
