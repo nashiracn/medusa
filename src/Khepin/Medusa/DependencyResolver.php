@@ -86,7 +86,6 @@ class DependencyResolver
     private function skipped($package): bool {
         return in_array($package, [
             'deployer/phpseclib',
-            'phpseclib/phpseclib',
             'elfet/php-ssh',
         ]);
     }

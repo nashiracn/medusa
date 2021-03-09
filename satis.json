@@ -1,6 +1,6 @@
 {
     "homepage": "http://composer.zhixue-edu.com:60443",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "name": "zxedu/composer-repository",
     "output-dir": "/mnt/nvme0n1/ci/web",
     "output-html": true,
